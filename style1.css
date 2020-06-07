@@ -15,6 +15,10 @@ body{
 #footer{
 	background: #f6f6f9;
 }
+#lc,#lc:hover{
+	text-decoration:none;
+	color:$ffffff;
+}
 
 
 
