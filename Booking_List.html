@@ -16,7 +16,8 @@
         type="image/x-icon">
       <link rel="stylesheet" href="style3.css">
     </head>
-    <body>
+    <body onload="myFunction()">
+    <div id="loading" class="text-center"><span class="text-white" id="load">Loading...</span></div>
       <header class="bg-dark h-20 container-fluid">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
           <a class="navbar-brand" href="index.html"><img class="img-fluid" id="logo" src="https://i2.wp.com/www.cosmoderma.healios.co.in/wp-content/uploads/2019/04/practo.png" alt="practo logo"></a>
@@ -161,6 +162,10 @@
           animation: 'scale',
           arrow: true
         });
+        var preloader = document.getElementById("loading");
+        function myFunction(){
+          preloader.style.display = 'none';
+        };
       </script>
       </body>
     </html>
