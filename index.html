@@ -207,7 +207,7 @@
       <header class="bg-dark container-fluid">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
           <!-- Brand -->
-          <a class="navbar-brand" href=""><img class="img-fluid" id="logo" src="https://i2.wp.com/www.cosmoderma.healios.co.in/wp-content/uploads/2019/04/practo.png" alt="practo logo"></a>
+          <a class="navbar-brand" href="index.html"><img class="img-fluid" id="logo" src="https://i2.wp.com/www.cosmoderma.healios.co.in/wp-content/uploads/2019/04/practo.png" alt="practo logo"></a>
         
           <!-- Toggler/collapsibe Button -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -218,7 +218,7 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav text-center ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About Us</a>
@@ -226,32 +226,19 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact Us</a>
               </li>
-              @if(session('details'))
               <li class="nav-item">
-                <a class="nav-link" href="booking_list">Booking List</a>
+                <a class="nav-link" href="Booking_List.html">Booking List</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="add_details">Add Test/Lab</a>
+                <a class="nav-link" href="Add_Details">Add Test/Lab</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="login" href="logout">Logout</a>
+                <a class="nav-link" id="logout" href="login.html">Admin Login</a>
               </li>
-              @else
-              <li class="nav-item">
-                <a class="nav-link" id="logout" href="admin">Admin Login</a>
-              </li>
-              @endif
             </ul>
           </div>
         </nav>
       </header>
-      @if(session('alogged')){
-        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-          Already logged in as admin
-        </div>
-      }
-      @endif
       <div class="container-fluid" id="diagnostic">
         <a href="booking_page" class="btn btn-dark btn-outline-danger text-white sample2 op mar">
         BOOK A DIAGNOSTIC TEST</a>
@@ -316,44 +303,6 @@
       </section>
       <br/>
       <br/>
-      @if(session('message'))
-        <script>
-        swal({
-            title: "Thank You!",
-            text: "Your booking has been confirmed.",
-            icon: "success",
-        });
-        </script>
-      
-      @endif
-      @if(session('login'))
-        <script>
-        swal({
-            title: "Logged in successfully!",
-            icon: "success",
-        });
-        </script>
-      
-      @endif
-      @if(session('logout'))
-        <script>
-        swal({
-            title: "Logged out successfully!",
-            icon: "success",
-        });
-        </script>
-      
-      @endif
-      @if(session('access'))
-        <script>
-        swal({
-            title: "Access Denied!",
-            text: "Please login to access this page",
-            icon: "error",
-        });
-        </script>
-      
-      @endif
       <footer id="footer">
         <div id="world">
           <h4 class="text-warning" id="about"><span class="shadow rounded">World's Largest Healthcare</span></h4>
